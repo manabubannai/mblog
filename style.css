@@ -1,0 +1,39 @@
+body {
+    font-family: 'SF Pro Display', 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding: 15px;
+}
+h1 {
+    font-size: 27px;
+    /* font-weight: 400; */
+}
+a {
+    color: #2b6cc2;
+}
+
+.posts ul {
+    list-style: none;
+    font-size: 15px;
+    padding: 0;
+}
+.posts li {
+    margin-bottom: 20px;
+}
+
+.post h1 {
+    font-size: 23px;
+    margin-top: 30px;
+}
+.post p {
+        margin-bottom: 20px;
+}
+.post ul {
+    line-height: 2;
+}
+.post hr {
+    background: #e6e6e6;
+    border: none;
+    height: 1px;
+    margin: 20px 0;
+}
