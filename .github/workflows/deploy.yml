@@ -1,0 +1,38 @@
+name: Auto Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:  # 手動実行も可能にする
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Deploy to server
+      uses: appleboy/ssh-action@v0.1.5
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          echo "Starting deployment..."
+          cd /var/www/mblog
+          
+          # Gitの安全なディレクトリとして設定
+          git config --global --add safe.directory /var/www/mblog
+          
+          # 最新の変更を取得
+          git pull origin main
+          
+          # 権限を修正
+          sudo chown -R caddy:caddy /var/www/mblog
+          
+          # Caddyをリロード
+          sudo systemctl reload caddy
+          
+          echo "Deployment completed at $(date)"
+          
+          # 最新のコミットを表示
+          git log -1 --oneline
