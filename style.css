@@ -5,7 +5,8 @@ body {
     color: #333;
     line-height: 1.65;
     padding: 15px;
-    max-width: 600px;
+    max-width: 680px;
+    margin: auto;
 }
 h1 {
     font-size: 27px;
