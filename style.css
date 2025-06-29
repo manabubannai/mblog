@@ -3,6 +3,7 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 15px;
+    max-width: 600px;
 }
 h1 {
     font-size: 27px;
