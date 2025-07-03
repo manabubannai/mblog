@@ -35,6 +35,11 @@ a {
 .post ul {
     line-height: 2;
 }
+.post img {
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
 .post hr {
     background: #e6e6e6;
     border: none;
