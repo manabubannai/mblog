@@ -47,6 +47,7 @@ a {
     margin: 20px 0;
 }
 .post code {
+    padding: 5px 15px;
     background-color: #ced4da70;
     border-radius: 3px;
     font-size: 90%;
